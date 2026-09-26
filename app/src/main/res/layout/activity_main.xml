@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F1E8"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <!-- TÍTULO -->
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huellitas"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#386641"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp" />
+
+    <!-- SUBTÍTULO -->
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Un hogar para cada patita"
+        android:textSize="18sp"
+        android:textColor="#6B705C"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <!-- TÍTULO DEL FORMULARIO -->
+
+    <!-- IMAGEN DE LA MASCOTA -->
+
+    <ImageView
+        android:id="@+id/ivMascota"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_mascota"
+        android:contentDescription="Imagen de una mascota"
+        android:scaleType="fitCenter"
+
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/tvFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Encuentra a tu nuevo compañero"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#386641"
+
+        app:layout_constraintTop_toBottomOf="@id/ivMascota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp" />
+
+    <!-- NOMBRE DEL ADOPTANTE -->
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del adoptante"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+
+        app:layout_constraintTop_toBottomOf="@id/tvFormulario"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu nombre"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+
+        app:layout_constraintTop_toBottomOf="@id/tvNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- TIPO DE MASCOTA -->
+
+    <TextView
+        android:id="@+id/tvTipoMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Qué mascota buscas?"
+        android:textSize="16sp"
+        android:textColor="#000000"
+
+        app:layout_constraintTop_toBottomOf="@id/etNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp" />
+
+    <RadioGroup
+        android:id="@+id/rgMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        app:layout_constraintTop_toBottomOf="@id/tvTipoMascota"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbPerro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perro"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbGato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gato"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp" />
+
+    </RadioGroup>
+
+    <!-- CONFIRMACIÓN -->
+
+    <CheckBox
+        android:id="@+id/cbEspacio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tengo espacio adecuado para la mascota"
+        android:textSize="14sp"
+        android:textColor="#000000"
+
+        app:layout_constraintTop_toBottomOf="@id/rgMascota"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="25dp" />
+
+    <!-- BOTÓN -->
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CONTINUAR 🐾"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#386641"
+
+        app:layout_constraintTop_toBottomOf="@id/cbEspacio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

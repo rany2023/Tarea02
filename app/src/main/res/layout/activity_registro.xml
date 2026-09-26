@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F1E8"
+    tools:context=".RegistroActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- TÍTULO -->
+
+        <TextView
+            android:id="@+id/tvTituloRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🐾 Registrar mascota"
+            android:textSize="28sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp" />
+
+        <!-- SUBTÍTULO -->
+
+        <TextView
+            android:id="@+id/tvSubtituloRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuéntanos sobre tu compañero"
+            android:textSize="17sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/tvTituloRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp" />
+
+        <!-- IMAGEN -->
+
+        <ImageView
+            android:id="@+id/ivMascotaRegistro"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_mascota"
+            android:contentDescription="Imagen de mascota"
+            android:scaleType="fitCenter"
+
+            app:layout_constraintTop_toBottomOf="@id/tvSubtituloRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp" />
+
+        <!-- NOMBRE -->
+
+        <TextView
+            android:id="@+id/tvNombreMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la mascota"
+            android:textSize="16sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/ivMascotaRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp" />
+
+        <EditText
+            android:id="@+id/etNombreMascota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Ej. Pata Blanca"
+            android:inputType="textCapSentences"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/tvNombreMascota"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- TIPO DE MASCOTA -->
+
+        <TextView
+            android:id="@+id/tvTipoRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de mascota"
+            android:textSize="16sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/etNombreMascota"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp" />
+
+        <RadioGroup
+            android:id="@+id/rgTipoRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/tvTipoRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rbPerroRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perro 🐶"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rbGatoRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gato 🐱"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginStart="20dp" />
+
+        </RadioGroup>
+
+        <!-- SEXO -->
+
+        <TextView
+            android:id="@+id/tvSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexo"
+            android:textSize="16sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/rgTipoRegistro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp" />
+
+        <RadioGroup
+            android:id="@+id/rgSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            app:layout_constraintTop_toBottomOf="@id/tvSexo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rbMacho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Macho"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/rbHembra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hembra"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginStart="20dp" />
+
+        </RadioGroup>
+
+        <!-- CARACTERÍSTICAS -->
+
+        <TextView
+            android:id="@+id/tvCaracteristicas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Características"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/rgSexo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp" />
+
+        <CheckBox
+            android:id="@+id/cbVacunado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiene vacunas"
+            android:textSize="15sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/tvCaracteristicas"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbEsterilizado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Está esterilizado"
+            android:textSize="15sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/cbVacunado"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbCuidados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requiere cuidados especiales"
+            android:textSize="15sp"
+            android:textColor="#000000"
+
+            app:layout_constraintTop_toBottomOf="@id/cbEsterilizado"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- BOTÓN -->
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="REGISTRAR 🐾"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#386641"
+
+            app:layout_constraintTop_toBottomOf="@id/cbCuidados"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
